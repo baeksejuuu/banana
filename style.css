@@ -1,0 +1,78 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff8fab;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+p {
+  margin: 0 0;
+  position: absolute;
+  font: 16px Verdana;
+  color: #eee;
+  height: 25px;
+  top: calc(100vh - 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 2px white;
+}
+
+p a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+span {
+  font-size: 11px;
+}
+
+p > a:first-of-type {
+  font-size: 20px;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.heart {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  width: 10px;
+  height: 10px;
+  background-color: rgb(245, 72, 72);
+  animation: blink 1s linear infinite;
+  z-index: 1;
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  position: absolute;
+  background-color: rgb(245, 72, 72);
+  border-radius: 50%;
+  width: 10px;  
+  height: 10px; 
+}
+
+.heart:before {
+  top: -5px;
+  left: 0;
+}
+
+.heart:after {
+  top: 0;
+  left: 5px;
+}
+
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
