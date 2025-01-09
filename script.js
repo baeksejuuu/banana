@@ -237,7 +237,7 @@ Shard.prototype.step = function() {
 function anim() {
     window.requestAnimationFrame(anim);
 
-    ctx.fillStyle = "#FFC0CB"; 
+    ctx.fillStyle = "#FFFFFF"; 
     ctx.fillRect(0, 0, w, h);
 
     ctx.translate(hw, hh);
